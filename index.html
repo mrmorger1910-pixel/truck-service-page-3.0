@@ -29,8 +29,8 @@ body {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    white-space: nowrap; /* текст в одну строку */
-    overflow-x: auto;
+    /* убрали white-space: nowrap; чтобы текст переносился */
+    overflow-x: visible;
 }
 
 .description {
@@ -58,11 +58,12 @@ body {
     border-radius: 50px;
     margin-left: 20px;
     margin-right: 20px;
+    flex-wrap: wrap; /* кнопки будут переноситься на узких экранах */
 }
 
 .call-button, .sms-button {
     font-size: 22px;
-    padding: 15px 40px; /* вернули исходный размер */
+    padding: 15px 40px;
     border-radius: 50px;
     box-shadow: 0 5px 12px rgba(0,0,0,0.3);
     border: none;
@@ -80,7 +81,7 @@ body {
 
 @media (max-width: 480px) {
     .description {
-        font-size: 18px;
+        font-size: 18px; /* уменьшаем размер для телефона */
     }
     .address {
         font-size: 20px;
