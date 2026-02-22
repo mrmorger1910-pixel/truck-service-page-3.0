@@ -10,56 +10,63 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
+    color: white;
 }
 
-.container {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5); 
+.text-container {
+    margin-top: 20vh; /* примерно на верхнюю половину половины экрана */
+    background: rgba(0, 0, 0, 0.6); /* затемнённый прямоугольник */
     padding: 30px 40px;
     border-radius: 15px;
+    text-align: center;
     max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .address {
     font-size: 28px;
     font-weight: bold;
-    color: #FFD700; 
+    color: #FFD700; /* золотой для адреса */
     margin-bottom: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .description {
     font-size: 20px;
-    color: #ffffff;
     line-height: 1.5;
-    margin-bottom: 30px;
     font-family: 'Arial', sans-serif;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
+    margin-bottom: 40px; /* отступ от низа экрана */
+    padding: 20px;
+    background: rgba(0,0,0,0.5); /* затемнённый овал */
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .call-button, .sms-button {
-    font-size: 22px;
-    padding: 15px 40px;
-    border-radius: 12px;
+    font-size: 24px;
+    padding: 18px 50px;
+    border-radius: 50px;
     box-shadow: 0 5px 12px rgba(0,0,0,0.3);
     border: none;
     cursor: pointer;
     text-decoration: none;
     color: white;
-    background-color: red; 
+    background-color: red;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -76,25 +83,24 @@ body {
         font-size: 18px;
     }
     .call-button, .sms-button {
-        font-size: 18px;
-        padding: 12px 25px;
+        font-size: 20px;
+        padding: 15px 35px;
     }
 }
 </style>
-
 </head>
 <body>
 
-<div class="container">
-    <div class="address">6850 W 63rd St, Chicago, IL 60638</div>
+<div class="text-container">
     <div class="description">
         Truck garage or road service, we'll help you with everything.
     </div>
+    <div class="address">6850 W 63rd St, Chicago, IL 60638</div>
+</div>
 
-    <div class="button-container">
-        <a href="tel:+13312332761" class="call-button">Call Now</a>
-        <a href="sms:+13312332761" class="sms-button">Send SMS</a>
-    </div>
+<div class="button-container">
+    <a href="tel:+13312332761" class="call-button">Call Now</a>
+    <a href="sms:+13312332761" class="sms-button">Text Message</a>
 </div>
 
 </body>
