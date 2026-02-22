@@ -21,31 +21,41 @@ body {
 }
 
 .text-container {
-    margin-top: 20vh; /* примерно верхняя половина половины экрана */
-    background: rgba(0, 0, 0, 0.6); /* затемнённый прямоугольник */
+    margin-top: 15vh; /* немного выше */
+    background: rgba(0, 0, 0, 0.6);
     padding: 30px 40px;
     border-radius: 15px;
-    text-align: center;
+    text-align: left; /* выравниваем по левому краю для отступов */
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    /* убрали white-space: nowrap; чтобы текст переносился */
-    overflow-x: visible;
 }
 
 .description {
-    font-size: 20px;
-    line-height: 1.5;
-    font-family: 'Arial', sans-serif;
-    color: #FFD700; /* золотой текст */
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
+    color: #FFD700; /* золотой */
+    margin-bottom: 20px;
+}
+
+.services {
+    font-size: 18px;
+    color: white;
+    line-height: 1.8;
+    margin-left: 20px; /* отступ от начала второй строки */
+}
+
+.services span::before {
+    content: "• "; /* точка перед текстом */
+    color: #FFD700; /* можно золотой */
+    font-weight: bold;
 }
 
 .address {
     font-size: 24px;
-    color: white; /* белый для адреса */
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
 }
 
 .button-container {
@@ -58,7 +68,7 @@ body {
     border-radius: 50px;
     margin-left: 20px;
     margin-right: 20px;
-    flex-wrap: wrap; /* кнопки будут переноситься на узких экранах */
+    flex-wrap: wrap;
 }
 
 .call-button, .sms-button {
@@ -81,7 +91,11 @@ body {
 
 @media (max-width: 480px) {
     .description {
-        font-size: 18px; /* уменьшаем размер для телефона */
+        font-size: 20px;
+    }
+    .services {
+        font-size: 16px;
+        margin-left: 10px;
     }
     .address {
         font-size: 20px;
@@ -96,8 +110,13 @@ body {
 <body>
 
 <div class="text-container">
-    <div class="description">
-        Truck repair shop and road service, we'll help you everywhere.
+    <div class="description">Truck repair shop / Road service</div>
+    <div class="services">
+        <span>Oil Change</span><br>
+        <span>Brake Service & Replacement</span><br>
+        <span>Valve Adjustment & Engine Tune</span><br>
+        <span>Suspension & Shock Replacement</span><br>
+        <span>Tire Balancing & Replacement</span>
     </div>
     <div class="address">6850 W 63rd St, Chicago, IL 60638</div>
 </div>
