@@ -21,33 +21,36 @@ body {
 }
 
 .text-container {
-    margin-top: 15vh; /* немного выше */
+    margin-top: 15vh;
     background: rgba(0, 0, 0, 0.6);
     padding: 30px 40px;
     border-radius: 15px;
-    text-align: left; /* выравниваем по левому краю для отступов */
+    text-align: center;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .description {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
-    color: #FFD700; /* золотой */
+    color: #FFD700;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .services {
     font-size: 18px;
     color: white;
     line-height: 1.8;
-    margin-left: 20px; /* отступ от начала второй строки */
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .services span::before {
-    content: "• "; /* точка перед текстом */
-    color: #FFD700; /* можно золотой */
+    content: "• ";
+    color: #FFD700;
     font-weight: bold;
 }
 
@@ -56,6 +59,8 @@ body {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 20px;
+    text-decoration: underline; /* добавлено подчеркивание */
+    text-underline-offset: 4px; /* немного от линии до текста */
 }
 
 .button-container {
@@ -91,11 +96,10 @@ body {
 
 @media (max-width: 480px) {
     .description {
-        font-size: 20px;
+        font-size: 24px;
     }
     .services {
         font-size: 16px;
-        margin-left: 10px;
     }
     .address {
         font-size: 20px;
