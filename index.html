@@ -21,7 +21,7 @@ body {
 }
 
 .text-container {
-    margin-top: 20vh; /* примерно на верхнюю половину половины экрана */
+    margin-top: 20vh; /* примерно верхняя половина половины экрана */
     background: rgba(0, 0, 0, 0.6); /* затемнённый прямоугольник */
     padding: 30px 40px;
     border-radius: 15px;
@@ -29,37 +29,40 @@ body {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.address {
-    font-size: 28px;
-    font-weight: bold;
-    color: #FFD700; /* золотой для адреса */
-    margin-bottom: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: nowrap; /* текст в одну строку */
+    overflow-x: auto;
 }
 
 .description {
     font-size: 20px;
     line-height: 1.5;
     font-family: 'Arial', sans-serif;
+    color: #FFD700; /* золотой текст */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.address {
+    font-size: 24px;
+    color: white; /* белый для адреса */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 40px; /* отступ от низа экрана */
+    margin-bottom: 40px;
     padding: 20px;
-    background: rgba(0,0,0,0.5); /* затемнённый овал */
+    background: rgba(0,0,0,0.5);
     border-radius: 50px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .call-button, .sms-button {
-    font-size: 24px;
-    padding: 18px 50px;
+    font-size: 22px;
+    padding: 15px 40px; /* вернули исходный размер */
     border-radius: 50px;
     box-shadow: 0 5px 12px rgba(0,0,0,0.3);
     border: none;
@@ -76,15 +79,15 @@ body {
 }
 
 @media (max-width: 480px) {
-    .address {
-        font-size: 24px;
-    }
     .description {
         font-size: 18px;
     }
+    .address {
+        font-size: 20px;
+    }
     .call-button, .sms-button {
         font-size: 20px;
-        padding: 15px 35px;
+        padding: 12px 30px;
     }
 }
 </style>
@@ -93,7 +96,7 @@ body {
 
 <div class="text-container">
     <div class="description">
-        Truck garage or road service, we'll help you with everything.
+        Truck repair shop and road service, we'll help you everywhere.
     </div>
     <div class="address">6850 W 63rd St, Chicago, IL 60638</div>
 </div>
